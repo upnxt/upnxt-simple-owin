@@ -1,0 +1,31 @@
+﻿@model SimpleOwin.ViewModels.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+
+<section>
+    <div>
+        <h2>Login</h2>
+
+        @using (Html.BeginForm("Login", "Account"))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary()
+            
+            <label>
+                Username
+                @Html.TextBoxFor(m => m.UserName)
+            </label>
+
+            <label>
+                Password
+                @Html.PasswordFor(m => m.Password)
+            </label>
+
+            <input type="submit" value="Submit"/>
+        }
+    </div>
+</section>

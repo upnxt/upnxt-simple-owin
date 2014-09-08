@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "#VIP #EHGURLCHECKMYOWIN";
+}
+
+<nav>
+    <a href="@Url.Action("Logout", "Account")">Logout</a>
+</nav>
+
+<section>
+    <p>Welcome to the super secret club <strong>@HttpContext.Current.User.Identity.Name</strong>, it's all down hill from here.</p>
+</section>
